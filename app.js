@@ -11,13 +11,24 @@ const end = section.querySelector("h1");
 const controller = new ScrollMagic.Controller();
 
 //SCENES
-const scene = new ScrollMagic.Scene({
+let scene = new ScrollMagic.Scene({
   duration: 6000,
   triggerElement: intro,
   triggerHook: 0,
 })
   .addIndicators()
   .setPin(intro)
+  .addTo(controller);
+
+//TEXT ANIMATION
+const textAnim = gsap.to(text, { opacity: 0, duration: 3 });
+
+let scene2 = new ScrollMagic.Scene({
+  duration: 3000,
+  triggerElement: intro,
+  triggerHook: 0,
+})
+  .setTween(textAnim)
   .addTo(controller);
 
 //VIDEO ANIMATION
