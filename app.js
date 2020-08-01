@@ -12,7 +12,7 @@ const controller = new ScrollMagic.Controller();
 
 //SCENES
 let scene = new ScrollMagic.Scene({
-  duration: 6000,
+  duration: 10000,
   triggerElement: intro,
   triggerHook: 0,
 })
@@ -47,5 +47,5 @@ setInterval(() => {
 
   // video.currentTime = scrollPos;
   video.currentTime = delay;
-}, 50);
+}, 90);
 // put 1000/frameRate here
