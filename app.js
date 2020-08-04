@@ -12,7 +12,7 @@ const controller = new ScrollMagic.Controller();
 
 //SCENES
 let scene = new ScrollMagic.Scene({
-  duration: 10000,
+  duration: 6000,
   triggerElement: intro,
   triggerHook: 0,
 })
@@ -21,7 +21,7 @@ let scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 //TEXT ANIMATION
-const textAnim = gsap.to(text, { opacity: 0, duration: 3 });
+const textAnim = gsap.to(text, { opacity: 0, y: -500, duration: 3 });
 
 let scene2 = new ScrollMagic.Scene({
   duration: 3000,
